@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poller+One&family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #000;
+}
+
+/*/////////////////////////NAVBAR/////////////////////////*/
+.nav{
+    position:fixed;
+    padding: 10px 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    box-sizing: border-box;
+    background-color: #000;
+    z-index: 100;
+
+}
+.nav a {
+    color:white;
+}
+.nav .logo{
+    width: 120px;
+}
+.nav .liens ul {
+    display:flex;
+}
+.nav .liens ul li {
+   margin: 0 20px;
+}
+
+.nav .liens a::after {
+    content: "";
+    display: block;
+    position:relative;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform: scale(0);
+    transform-origin: left;
+    background: #ffffff;
+    transition: transform 0.3s ease-out;
+  }
+  .nav .liens a:hover::after {
+    transform: scaleX(1);
+  }
+  .nav .menu {
+    display: none;
+    position: absolute;
+    top:45px;
+    right:20px;
+    width:25px;
+  }
+ 
+  @media screen and (max-width:900px) {
+    .nav{
+    padding:0;
+    }
+    .nav .logo{
+        width: 150px;
+        padding: 10px 15px;
+    }
+    .liens {
+        top:0;
+        left:0;
+        position:absolute;
+        background-color: rgba(255, 255, 255, 0.214);
+        width:100%;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(7px);
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .liens.mobile-menu {
+        margin-left: 0;
+       }
+    .liens ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav .menu {
+        display: block;
+        position: absolute;
+        top:27px;
+        right:25px;
+        width:25px;
+      }
+      .nav .liens ul li {
+        margin: 20px 0;
+        font-size: 1.2em;
+     }
+    
+  }
+  @media screen and (max-width:200px) {
+    .nav .logo{
+        width: 70px;
+        padding: 10px ;
+    }
+    .nav .liens ul li {
+        margin: 0 10px;
+      }
+      .nav .menu {
+        display: block;
+        position: absolute;
+        top:15px;
+        right:10px;
+        width:25px;
+      }
+      .nav{
+        padding:0;
+        background: none;
+        }
+  }
+    
+  
+  /*////////////////////FIN NAV BAR //////////////////////*/
+
+ /*///////////////////////sign up/////////////////////////*/
+
+ .register{
+    
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+.register-form{
+    
+    margin-top: 20vh;
+    margin-left: 10vw;
+    width: 30vw;
+    height: auto;
+    padding-bottom: 1vh;
+    background-color: #fefefe;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+.login-form{
+    overflow: hidden;
+    margin-top: 22vh;
+    margin-left: 10vw;
+    width: 30vw;
+    height: auto;
+    padding : 1vh;
+    background-color: #fefefe;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+#peacock{
+    position: absolute;
+    margin-top: 0vh;
+    margin-left: 32vw;
+    width: 65vw;
+    height: 85vh;
+    
+}
+.register-form h1,.login-form h1{
+    margin:auto;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3vw;
+    color: #000;
+}
+   
+
+.register-form input,.login-form input{
+    display: absolute;
+    margin : auto;
+    margin-top: 4vh;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2vw;
+    width: 22vw;
+    height: 8vh;
+    border: none;
+    background-color: #d7d7d7;
+}
+.register-form #submit,.login-form #submit{
+    
+    margin-left: 1vw;
+    margin-top: 4vh;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2vw;
+    padding: 1vh 2vh 1vh 2vh;
+}
+.register-form #submit:hover,.login-form #submit:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.register-form #login ,.login-form #login{
+    color: #000955;
+    margin-top: 2vh;
+    font-size: 1.5em;
+}
+
+@media screen and  (max-width:900px) {
+    .register-form{
+        
+        margin-top: 20vh;
+        margin-left: 20vw;
+        width: 60vw;
+        height: auto;
+        padding-bottom: 1vh;
+        flex-direction: column;
+    }
+    .login-form{
+        margin-top: 22vh;
+        margin-left: 20vw;
+        width: 60vw; 
+        height: auto;
+        padding-bottom: 1vh;
+        flex-direction: column;
+    }
+    #peacock{
+        margin-top: 0vh;
+        margin-left: 45vw;
+        width: 55vw;
+        height: 85vh;
+        display: none;
+    }
+    .register-form h1,.login-form h1{
+        font-size: 2.5em;
+    }
+    .register-form input,.login-form input{
+        font-size: 3vw;
+        width: 45vw;
+        height: 4vh;
+    }
+    .register-form #submit,.login-form #submit{
+        font-size: 3vw;
+        padding: 1vh 2vh 1vh 2vh;
+        
+    }
+    .register-form #login ,.login-form #login{
+        font-size: 1.5em;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    .register-form {
+        margin-top: 20vh;
+        margin-left: 10vw;
+        width: 80vw;
+        height: auto;
+        padding-bottom: 1vh;
+    }
+    .login-form{
+        margin-top: 22vh;
+        margin-left: 10vw;
+        width: 80vw;
+        height: auto;
+        padding-bottom: 1vh;
+    }
+    #peacock{
+        margin-top: 0vh;
+        margin-left: 45vw;
+        width: 55vw;
+        height: 85vh;
+        display: none;
+    }
+    .register-form h1,.login-form h1{
+        font-size: 2em;
+    }
+    .register-form input,.login-form input{
+        font-size: 1em;
+        width: 65vw;
+        height: 4vh;
+    }
+    .register-form #submit,.login-form #submit{
+        font-size: 1em;
+        padding: 1vh 2vh 1vh 2vh;
+    }
+    .register-form #login ,.login-form #login{
+        font-size: 1.5em;
+    }
+}
+/*

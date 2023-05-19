@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/icon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssée voyages</title>
+    <link rel="stylesheet" href="styleadmin.css" />
+  
+</head>
+<body>
+<nav class="nav">
+    <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+    <div class="liens">
+        <ul>
+            
+             <li ><a href="index.html"class="Accueil" >Accueil</a></li>
+             <li ><a href="destinations.html"class="Destinations" >Destinations</a></li>
+             <li ><a href="envies.html" class="Envies">Envies</a></li>
+             <li ><a href="compte.html" class="Compte">Compte</a></li>
+        </ul>
+    </div>
+    <img src="img/menu.png" alt="menu" class="menu">
+</nav>
+ <div class = "deconnexion">
+<button id="logoutButton">Déconnexion</button>
+</div>
+
+<div class="exp-form">
+    <h1>Creer une nouvelle expérience</h1>
+
+    <form id="exp-form">
+        
+        <input type="nomexp" id="nomexp" placeholder="Nom de l'expérience" required>
+        
+        <input type="prix" id="prix" placeholder="Prix" required>
+
+        <input type="duree" id="duree" placeholder="Durée" required>
+
+        <input type="depart" id="depart" placeholder="Départ" required>
+
+        <input type="pays" id="pays" placeholder="Pays" required>
+
+        <input type="continent" id="continent" placeholder="Continent" required>
+
+        <input type="activites" id="activites" placeholder="Activités" required>
+
+        <input type="nbpers" id="nbpers" placeholder="Nombre de personnes" required>
+        
+        <button  id="submit" type="submit">Creer</button>
+    </form>
+</div>
+
+
+<script src="adminscript.js"></script>
+<script>
+    const menu = document.querySelector(".menu")
+    const liens = document.querySelector(".liens")
+
+    menu.addEventListener('click',()=>{
+    liens.classList.toggle('mobile-menu')
+    });
+</script>
+</body>
+</html>

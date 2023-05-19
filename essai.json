@@ -1,0 +1,52 @@
+[
+    {
+        "nomexp":"Aventurier",
+        "prix":"40€",
+        "duree":"4 jours",
+        "depart":"01/01/2020",
+        "pays":"France",
+        "continent":"Europe",
+        "activites":"Canyoning, Escalade, Via Ferrata, Randonnée",
+        "nbpers":"2"
+    },
+    {
+        "nomexp":"Luxueux",
+        "prix":"400€",
+        "duree":"2 jours",
+        "depart":"02/06/2020",
+        "pays":"Thailande",
+        "continent":"Asie",
+        "activites":"Canyoning, Escalade, Via Ferrata, Randonnée",
+        "nbpers":"2"
+    },
+    {
+        "nomexp":"Familial",
+        "prix":"1000€",
+        "duree":"10 jours",
+        "depart":"01/01/2020",
+        "pays":"Colombie",
+        "continent":"Amérique",
+        "activites":"Canyoning, Escalade, Via Ferrata, Randonnée",
+        "nbpers":"4"
+    },
+    {
+        "nomexp":"Familial",
+        "prix":"1000€",
+        "duree":"10 jours",
+        "depart":"01/01/2020",
+        "pays":"Colombie",
+        "continent":"Amérique",
+        "activites":"Canyoning, Escalade, Via Ferrata, Randonnée",
+        "nbpers":"4"
+    },
+    {
+        "nomexp":"Familial",
+        "prix":"1000€",
+        "duree":"10 jours",
+        "depart":"01/01/2020",
+        "pays":"Colombie",
+        "continent":"Amérique",
+        "activites":"Canyoning, Escalade, Via Ferrata, Randonnée",
+        "nbpers":"4"
+    }
+]

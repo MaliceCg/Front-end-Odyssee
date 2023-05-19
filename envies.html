@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/icon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssée voyages</title>
+
+    <link rel="stylesheet" href="styleenvies.css" />
+  
+</head>
+<body>
+<nav class="nav">
+   <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+   <div class="liens">
+    <ul>
+       
+        <li ><a href="index.html"class="Accueil" >Accueil</a></li>
+        <li ><a href="destinations.html"class="Destinations" >Destinations</a></li>
+        <li ><a href="envies.html" class="Envies">Envies</a></li>
+        <li ><a href="compte.html" class="Compte">Compte</a></li>
+    </ul>
+</div>
+<img src="img/menu.png" alt="menu" class="menu">
+</nav>
+
+    <div class="titre">
+        <h1>Expériences</h1>
+    </div>
+    <div class="boutons">
+        <button id="aventurier-btn">Aventurier</button>
+        <button id="luxueux-btn">Luxueux</button>
+        <button id="fam-btn">Familial</button>
+        <button id="cult-btn">Culturel</button>
+        <button id="be-btn">Bien-être</button>
+        <button id="eco-btn">Eco-responsable</button>
+    </div>
+
+    <div class="experiences">
+    
+    </div>
+</div>
+<script src="scriptjson.js"></script>
+<script>
+    const menu = document.querySelector(".menu")
+    const liens = document.querySelector(".liens")
+
+    menu.addEventListener('click',()=>{
+    liens.classList.toggle('mobile-menu')
+    });
+   
+</script>
+
+</body>
+</html>

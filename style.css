@@ -1,0 +1,754 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poller+One&family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #000;
+}
+header{
+    background: #000000;
+    height: 100vh;
+    width: 100vw;
+    background-size:cover;
+}
+
+/*/////////////////////////NAVBAR/////////////////////////*/
+.nav{
+    position:fixed;
+    padding: 10px 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    box-sizing: border-box;
+    background-color: #000;
+    z-index: 100;
+
+}
+.nav a {
+    color:white;
+}
+.nav .logo{
+    width: 120px;
+}
+.nav .liens ul {
+    display:flex;
+}
+.nav .liens ul li {
+   margin: 0 20px;
+}
+
+.nav .liens a::after {
+    content: "";
+    display: block;
+    position:relative;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform: scale(0);
+    transform-origin: left;
+    background: #ffffff;
+    transition: transform 0.3s ease-out;
+  }
+  .nav .liens a:hover::after {
+    transform: scaleX(1);
+  }
+  .nav .menu {
+    display: none;
+    position: absolute;
+    top:45px;
+    right:20px;
+    width:25px;
+  }
+ 
+  @media screen and (max-width:900px) {
+    .nav{
+    padding:0;
+    }
+    .nav .logo{
+        width: 150px;
+        padding: 10px 15px;
+    }
+    .liens {
+        top:0;
+        left:0;
+        position:absolute;
+        background-color: rgba(255, 255, 255, 0.214);
+        width:100%;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(7px);
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .liens.mobile-menu {
+        margin-left: 0;
+       }
+    .liens ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav .menu {
+        display: block;
+        position: absolute;
+        top:27px;
+        right:25px;
+        width:25px;
+      }
+      .nav .liens ul li {
+        margin: 20px 0;
+        font-size: 1.2em;
+     }
+    
+  }
+  @media screen and (max-width:200px) {
+    .nav .logo{
+        width: 70px;
+        padding: 10px ;
+    }
+    .nav .liens ul li {
+        margin: 0 10px;
+      }
+      .nav .menu {
+        display: block;
+        position: absolute;
+        top:15px;
+        right:10px;
+        width:25px;
+      }
+      .nav{
+        padding:0;
+        background: none;
+        }
+  }
+    
+  
+  /*////////////////////FIN NAV BAR //////////////////////*/
+
+  /*///////////////////////IMAGE PRINCIPALE//////////////////////*/
+.section1{
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    background-size:cover;
+}
+  #image-principale {
+    padding-top: 60px;
+    background: url(img/imagePrincipale.jpg) no-repeat fixed 50% 50%;
+    background-size: cover; /*//pour que l'image prenne toute la largeur*/
+    height: 65vh;
+  }
+  h1{
+   
+    color:white;
+    font-size: 11vw;
+    margin-top: 45vh;
+}
+@media screen and (max-width:900px) {
+    .section1{
+        background-color: #000;
+        height: 65vh;
+        width: 100vw;
+        background-size:cover;
+    }
+    #image-principale {
+        padding-top: 60px;
+        background: url(img/imagePrincipale.jpg) no-repeat fixed 49% 20%;
+        background-size: cover; /*//pour que l'image prenne toute la largeur*/
+        height: 45vh;
+      }
+    
+    h1{
+        font-size: 10vw;
+        margin-top: 35vh;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .section1{
+        background-color: #000;
+        height: 70vh;
+        width: 100vw;
+        background-size:cover;
+    }
+    #image-principale {
+        padding-top: 60px;
+        background: url(img/imagePrincipale.jpg) no-repeat fixed 49% 20%;
+        background-size: cover; /*//pour que l'image prenne toute la largeur*/
+        height: 45vh;
+      }
+    
+    h1{
+        font-size: 13vw;
+        margin-top: 40vh;
+    }
+}
+
+@media screen and (max-width:200px) {
+    .section1{
+        background-color: #000;
+        height: 100vh;
+        width: 100vw;
+        background-size:cover;
+    }
+    #image-principale {
+        padding-top: 60px;
+        background: url(img/imagePrincipale.jpg) no-repeat fixed 49% 20%;
+        background-size: cover; /*//pour que l'image prenne toute la largeur*/
+        height: 40vh;
+      }
+    
+    h1{
+        font-size: 13vw;
+        margin-top: 35%;
+    }
+}
+ /*///////////////////////FIN IMAGE PRINCIPALE//////////////////////*/
+ 
+ /*///////////////////////CAROUSEL DESTINATIONS//////////////////////*/
+
+.carousel { /*pour que le carousel prenne toute la largeur, une division entière de page*/
+   
+    width: 100vw;
+    height: 65vh; /*pour que le carousel ne prenne pas tout l'écran et laisse le mot expérience s'affihcer*/
+    overflow: hidden;/* overflow: hidden;/*pour cacher les images qui dépassent*/
+    background-color: #000000;
+}
+.carousel .Destinations {
+    width: 200%;
+    margin-left: 8vw;
+    overflow: hidden; /*pour cacher les images qui dépassent*/
+    display: flex; /*pour que les images soient côte à côte*/
+    transition: all 1s ease;
+    
+}
+#two:checked ~ .Destinations {
+    margin-left: -100%;
+}
+.Destinations .texte{
+    text-align: center; /*pour centrer le texte et button*/
+}
+.texte h2{
+    font-size: 8vw; /*pour que le titre soit plus grand que le texte*/
+}
+.img{ /*pour que les images prennent la taille de cette division (img)*/
+    background-color: #000;
+    width:20vw;
+    height: 27.5vh;
+    margin:auto;
+    margin-top: 5vh;
+    
+}
+.img img{ /*pour que les images soit a la taille de leur division*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.texte button{ 
+    font-family: 'Bebas Neue', cursive;
+    background-color: #6b6b6b58;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5vw;
+    cursor : pointer;
+    transition: all 0.3s ease;
+}
+#Asie{
+    
+    background-color: rgb(255, 255, 255);
+    width:25vw;
+    height: 55vh;
+
+}
+#Afrique{
+    
+    background-color: #ffffff;
+    width:25vw;
+    height: 55vh;
+    margin-left: 5vw;
+    
+}
+#Europe{
+    
+    background-color: #ffffff;
+    width:25vw;
+    height: 55vh;
+    margin-left: 5vw;
+    
+}
+#Amérique{
+    
+    background-color: #ffffff;
+    width:25vw;
+    height: 55vh;
+    margin-left: 20vw;
+    
+}
+#Océanie{
+    
+    background-color: #ffffff;
+    width:25vw;
+    height: 55vh;
+    margin-left: 5vw;
+    
+}
+/****button du carousel*****/
+.button{
+    display:flex;
+    margin : 20px;
+    justify-content: center;
+}
+.button label{
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    margin: 0 4px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.button label.active{
+    width:35px;
+}
+#one:checked ~ .button label.one{
+    width:35px;
+}
+#two:checked ~ .button label.two{
+    width:35px;
+}
+#one:checked ~ .button label.two{
+    width:15px;
+}
+#two:checked ~ .button label.one{
+    width:15px;
+}
+input[type="radio"]{
+    display: none;
+}
+/*fin dubhutton du carousel*/
+@media screen and (max-width:900px) {
+    .carousel { /*pour que le carousel prenne toute la largeur, une division entière de page*/
+   
+        width: 100vw;
+        height: 33vh; /*pour que le carousel ne prenne pas tout l'écran et laisse le mot expérience s'affihcer*/
+        overflow: hidden;/*pour cacher les images qui dépassent*/
+        background-color: #000000;
+    }
+    .carousel .Destinations {
+        width: 200%;
+        margin:auto;
+        overflow: hidden; /*pour cacher les images qui dépassent*/
+        display: flex; /*pour que les images soient côte à côte*/
+        transition: all 1s ease;
+    }
+    #two:checked ~ .Destinations {
+        margin-left: -100%;
+    }
+    .img{ /*pour que les images prennent la taille de cette division (img)*/
+        background-color: #000;
+        width:25vw;
+        height: 16vh;
+        margin:auto;
+        margin-top: 1vh;
+        
+    }
+    .texte button{ 
+        font-family: 'Bebas Neue', cursive;
+        background-color: #6b6b6b58;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        font-size: 3vw;
+        cursor : pointer;
+        transition: all 0.3s ease;
+    }
+    #Asie{
+        background-color: rgb(255, 255, 255);
+        width:30vw;
+        height: 29vh;
+    }
+    #Afrique{
+    
+        background-color: rgb(255, 255, 255);
+        width:30vw;
+        height: 29vh;
+        margin-left: 5vw;
+    }
+    #Europe{
+    
+        background-color: rgb(255, 255, 255);
+        width:30vw;
+        height: 29vh;
+        margin-left: 5vw;
+    }
+    #Amérique{
+    
+        background-color: rgb(255, 255, 255);
+        width:30vw;
+        height: 29vh;
+        margin-left: 20vw;
+    }
+    #Océanie{
+    
+        background-color: rgb(255, 255, 255);
+        width:30vw;
+        height: 29vh;
+        margin-left: 5vw;
+    }
+    /****button du carousel*****/
+.button{
+    display:flex;
+    margin : 20px;
+    justify-content: center;
+}
+.button label{
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    margin: 0 4px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.button label.active{
+    width:35px;
+}
+#one:checked ~ .button label.one{
+    width:35px;
+}
+#two:checked ~ .button label.two{
+    width:35px;
+}
+#one:checked ~ .button label.two{
+    width:15px;
+}
+#two:checked ~ .button label.one{
+    width:15px;
+}
+input[type="radio"]{
+    display: none;
+}
+}
+
+@media screen and (max-width:500px) {
+    .carousel { /*pour que le carousel prenne toute la largeur, une division entière de page*/
+   
+        width: 100vw;
+        height: 31vh; /*pour que le carousel ne prenne pas tout l'écran et laisse le mot expérience s'affihcer*/
+        overflow: hidden;/*pour cacher les images qui dépassent*/
+        background-color: #000000;
+    }
+    .carousel .Destinations {
+        width: 200%;
+        margin:auto;
+        overflow: hidden; /*pour cacher les images qui dépassent*/
+        display: flex; /*pour que les images soient côte à côte*/
+        transition: all 1s ease;
+        
+    }
+    #two:checked ~ .Destinations {
+        margin-left: -100%;
+    }
+    .img{ /*pour que les images prennent la taille de cette division (img)*/
+        background-color: #000;
+        width:25vw;
+        height: 12vh;
+        margin:auto;
+        margin-top: 1vh;
+        
+    }
+    .texte button{ 
+        font-family: 'Bebas Neue', cursive;
+        background-color: #6b6b6b58;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        font-size: 3vw;
+        cursor : pointer;
+        transition: all 0.3s ease;
+    }
+    #Asie{
+        background-color: rgb(255, 255, 255);
+        width:29vw;
+        height: 23vh;
+        margin-left: 1.5vw;
+    }
+    #Afrique{
+    
+        background-color: rgb(255, 255, 255);
+        width:29vw;
+        height: 23vh;
+        margin-left: 5vw;
+    }
+    #Europe{
+    
+        background-color: rgb(255, 255, 255);
+        width:29vw;
+        height: 23vh;
+        margin-left: 5vw;
+    }
+    #Amérique{
+        
+            background-color: rgb(255, 255, 255);
+            width:29vw;
+            height: 23vh;
+            margin-left: 20vw;
+    }
+    #Océanie{
+        
+            background-color: rgb(255, 255, 255);
+            width:29vw;
+            height: 23vh;
+            margin-left: 5vw;
+    }
+    
+        /****button du carousel*****/
+.button{
+    display:flex;
+    margin : 20px;
+    justify-content: center;
+}
+.button label{
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    margin: 0 4px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.button label.active{
+    width:35px;
+}
+#one:checked ~ .button label.one{
+    width:35px;
+}
+#two:checked ~ .button label.two{
+    width:35px;
+}
+#one:checked ~ .button label.two{
+    width:15px;
+}
+#two:checked ~ .button label.one{
+    width:15px;
+}
+input[type="radio"]{
+    display: none;
+}
+}
+
+@media screen and (max-width:200px) {
+    .carousel { /*pour que le carousel prenne toute la largeur, une division entière de page*/
+   
+        width: 100vw;
+        height: 40vh; /*pour que le carousel ne prenne pas tout l'écran et laisse le mot expérience s'affihcer*/
+        overflow: hidden;/*pour cacher les images qui dépassent*/
+        background-color: #000000;
+    }
+    .carousel .Destinations {
+        margin:auto;
+        overflow: hidden; /*pour cacher les images qui dépassent*/
+        display: flex; /*pour que les images soient côte à côte*/
+        
+    }
+    
+    .img{ /*pour que les images prennent la taille de cette division (img)*/
+        background-color: #000;
+        width:25vw;
+        height: 15vh;
+        margin:auto;
+        margin-top: 1vh;
+        
+    }
+    .texte button{ 
+        font-family: 'Bebas Neue', cursive;
+        background-color: #6b6b6b58;
+        color: #fff;
+        border: none;
+        padding: 2px 4px;
+        font-size: 3vw;
+        cursor : pointer;
+        transition: all 0.3s ease;
+    }
+    #Asie{
+        background-color: rgb(255, 255, 255);
+        width:29vw;
+        height: 35vh;
+    }
+    #Afrique{
+    
+        background-color: rgb(255, 255, 255);
+        width:29vw;
+        height: 35vh;
+        margin-left: 5vw;
+    }
+    #Europe{
+    
+        background-color: rgb(255, 255, 255);
+        width:29vw;
+        height: 35vh;
+        margin-left: 5vw;
+    }
+}
+/************************FIN DU CAROUSEL****************/
+
+/*************************DEBUT SECTION 3****************/
+.section3{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center ;
+    
+    background-color: #000000;
+    width: 100vw;
+    height: 90vh;
+    margin-top: 65vh;
+}
+.section3 h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 10vw;
+    color: #fff;
+    margin-top: 4vh;
+}
+.section3 #trait1{
+    width: 80vw;
+    height: 2vh;
+    background-color: #fff;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+.envies1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;   
+}
+#aventurier, #luxueux,#culturel{
+    width: 26vw;
+    height: 9vh;
+    background-color: #fff;
+}
+.envies1 a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4.5vw;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+#luxueux, #culturel{
+    margin-left: 5vw;
+}
+.envies2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25vh;
+    margin-left: 12vw;   
+}
+#Bien-être, #Famille,#Eco-responsable{
+    width: 26vw;
+    height: 9vh;
+    background-color: #fff;
+}
+.envies2 a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4.5vw;
+    margin-top: 2vh;
+    
+}
+#Eco-responsable, #Famille{
+    margin-left: 5vw;
+}
+.section3 #trait2{
+  
+    width: 80vw;
+    height: 2vh;
+    background-color: #fff;
+    margin-top: 80vh;
+    margin-left: 18vw;
+    
+}
+
+@media screen and (max-width:900px) {
+    .section3{
+        flex-direction: column;
+        text-align: center ;
+        margin-top: 0vh;
+        background-color: #000000;
+        width: 100vw;
+        height: 90vh;
+        
+    }  
+    #Bien-être, #Famille,#Eco-responsable{
+        width: 26vw;
+        height: 100%;
+        background-color: #fff;
+    }
+    #aventurier, #luxueux,#culturel{
+        width: 26vw;
+        height: 100%;
+        background-color: #fff;
+    }
+    /*.section3 #trait2{
+        position: absolute;
+        width: 80vw;
+        height: 2vh;
+        background-color: #fff;
+        margin-top: 50%;
+        margin-left: 18vw;
+        
+    }*/
+}
+@media screen and (max-width:500px) {
+.section3{
+    align-items: center;
+}
+.envies1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vh;   
+}
+.envies2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;  
+    margin-left: 0vw; 
+}
+#aventurier, #luxueux,#culturel{
+    width: 46vw;
+    height: 50%;
+    background-color: #fff;
+}
+#luxueux, #culturel, #Eco-responsable, #Famille{
+    margin-top: 5vh;
+}
+#Bien-être, #Famille,#Eco-responsable{
+    width: 46vw;
+    height: 50%;
+    background-color: #fff;
+}
+#aventurier, #luxueux,#culturel,#Bien-être, #Famille,#Eco-responsable{
+    margin-left: 0vw;
+}
+
+
+.section3 #trait2,#trait1{
+    display: none;
+}
+.envies2 a,.envies1 a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 8vw;
+    margin-top: 2vh;
+    
+}
+
+}

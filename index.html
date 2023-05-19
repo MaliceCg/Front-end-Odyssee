@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/icon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssée voyages</title>
+
+    <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+<nav class="nav">
+   <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+   <div class="liens">
+    <ul>
+       
+        <li ><a href="index.html"class="Accueil" >Accueil</a></li>
+        <li ><a href="destinations.html"class="Destinations" >Destinations</a></li>
+        <li ><a href="envies.html" class="Envies">Envies</a></li>
+        <li ><a href="compte.html" class="Compte">Compte</a></li>
+    </ul>
+</div>
+<img src="img/menu.png" alt="menu" class="menu">
+</nav>
+<header>
+<div class="section1"> <!-- SECTION 1 -->
+    <div id="image-principale">
+    <h1>Vivez une véritable expérience</h1>
+    </div>
+</div>
+<div class="carousel"> <!-- SECTION 2 -->
+    <input type="radio" name="dot" id="one">
+    <input type="radio" name="dot" id="two">
+    <div class="Destinations">
+        <div id="Asie">
+            <div class="img">
+                <img src="img/Asie.jpg" alt="Asie">
+            </div>
+            <div class="texte">
+                <h2>Asie</h2>
+                <button class="btn" id="expAsie">voir les expériences</button>
+            </div>
+        </div>
+        <div id="Afrique">
+            <div class="img">
+                <img src="img/Afrique.jpg" alt="Afrique">
+            </div>
+            <div class="texte">
+                <h2>Afrique</h2>
+                <button class="btn" id="expAfrique" >voir les expériences</button>
+            </div>
+        </div>
+        <div id="Europe">
+            <div class="img">
+                <img src="img/Europe.jpg" alt="Europe">
+            </div>
+            <div class="texte">
+                <h2>Europe</h2>
+                <button class="btn" id="expEurope">voir les expériences</button>
+            </div>
+        </div>
+        <div id="Amérique">
+            <div class="img">
+                <img src="img/Amérique.jpg" alt="Amérique">
+            </div>
+            <div class="texte">
+                <h2>Amérique</h2>
+                <button class="btn" id="expAmerique">voir les expériences</button>
+            </div>
+        </div>
+        <div id="Océanie">
+            <div class="img">
+                <img src="img/Océanie.jpg" alt="Océanie">
+            </div>
+            <div class="texte">
+                <h2>Océanie</h2>
+                <button class="btn" id="expOceanie">voir les expériences</button>
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <label for="one" class="one active"></label>
+        <label for="two" class="two"></label>
+    </div>
+</div>
+</header> <!-- fin header, nécessaire pour la version mobile -->
+    
+<div class="section3"> <!-- SECTION 3 -->
+    <div class="texte">
+        <h1>Choisissez selon vos envies</h1>
+    </div>
+    <div id="trait1">
+    </div>
+    <div class="envies1">
+        <div id="aventurier">
+            <a href="envies.html#aventurier-btn">Aventurier</a>
+        </div>
+        <div id="luxueux">
+            <a href="envies.html#luxueux-btn">Luxueux</a>
+        </div>
+        <div id="culturel">
+            <a href="envies.html#cult-btn">Culturel</a>
+        </div>
+    </div>
+    <div class="envies2">
+        <div id="Bien-être">
+            <a href="envies.html#be-btn">Bien-être</a>
+        </div>
+        <div id="Famille">
+            <a href="envies.html#fam-btn">Famille</a>
+        </div>
+        <div id="Eco-responsable">
+            <a href="envies.html#eco-btn">Eco-responsable</a>
+        </div>
+    </div>
+    <div id="trait2">
+    </div>
+</div>
+</body>
+
+<script>
+        const menu = document.querySelector(".menu")
+        const liens = document.querySelector(".liens")
+
+        menu.addEventListener('click',()=>{
+        liens.classList.toggle('mobile-menu')
+        })
+
+const expAsie = document.getElementById('expAsie');
+const expAfrique = document.getElementById('expAfrique');
+const expEurope = document.getElementById('expEurope');
+const expAmerique = document.getElementById('expAmerique');
+const expOceanie = document.getElementById('expOceanie');
+
+expAsie.addEventListener('click', function() {
+  window.location.href = 'destinations.html#asie';
+});
+expAfrique.addEventListener('click', function() {
+  window.location.href = 'destinations.html#afrique';});
+expEurope.addEventListener('click', function() {
+    window.location.href = 'destinations.html#europe';});
+expAmerique.addEventListener('click', function() {
+    window.location.href = 'destinations.html#amerique';});
+expOceanie.addEventListener('click', function() {
+    window.location.href = 'destinations.html#oceanie';});
+
+
+
+
+
+ </script>
+</html>

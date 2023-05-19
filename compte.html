@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/icon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssée voyages</title>
+    <link rel="stylesheet" href="stylecompte.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bcryptjs/dist/bcrypt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+</head>
+<body>
+<nav class="nav">
+    <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+    <div class="liens">
+        <ul>
+            
+             <li ><a href="index.html"class="Accueil" >Accueil</a></li>
+             <li ><a href="destinations.html"class="Destinations" >Destinations</a></li>
+             <li ><a href="envies.html" class="Envies">Envies</a></li>
+             <li ><a href="compte.html" class="Compte">Compte</a></li>
+        </ul>
+    </div>
+    <img src="img/menu.png" alt="menu" class="menu">
+</nav>
+    
+    <div class="register">
+        <h1>Creez votre compte</h1>
+        <img id="peacock" src="img/signup.png" alt="paon">
+        <div class="register-form">
+            <h1>Creez votre compte</h1>
+            <a href="login.html" id="login">Vous avez déjà un compte ? Connectez-vous ici</a>
+
+            <form id="signup-form">
+               
+                <input type="pseudo" id="pseudo" placeholder="Pseudo" required>
+                
+                <input type="email" id="email" placeholder="Email" required>
+                
+                <input type="password" id="password" placeholder="Mot de passe" required>
+                
+                <button  id="submit" type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+
+<script type="module" src="script.js"></script>
+<script>
+    const menu = document.querySelector(".menu")
+    const liens = document.querySelector(".liens")
+
+    menu.addEventListener('click',()=>{
+    liens.classList.toggle('mobile-menu')
+    })
+</script>
+
+</body>
+</html>
