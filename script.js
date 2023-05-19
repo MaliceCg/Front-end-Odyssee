@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const user = await getCurrentUser();
           console.log(accessToken);
   
-          if (user === '64612c2d80639f2d582e6b49') {
+          if (user === '6467a3d6adbf2d004b01bf37') {
             window.location.href = 'admin.html';
           } else {
             window.location.href = 'profile.html';
