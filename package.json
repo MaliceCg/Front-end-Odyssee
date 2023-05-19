@@ -1,9 +1,12 @@
 {
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "crypto-js": "^4.1.1",
-    "dotenv": "^16.0.3",
-    "nodemon": "^2.0.22",
-    "swiper": "^9.2.4"
+    "build": "^0.1.4",
+    "webpack": "^5.83.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.1"
   }
 }

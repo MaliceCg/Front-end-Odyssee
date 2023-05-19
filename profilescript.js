@@ -1,5 +1,5 @@
 
-fetch('http://localhost:4200/api/guide/')
+fetch('https://ody-api.onrender.com/api/guide/')
   .then(response => response.json())
   .then(data => {
     const guideContainer = document.querySelector(".guides");
@@ -39,7 +39,7 @@ const logoutButton = document.getElementById('logoutButton');
 logoutButton.addEventListener('click', async function() {
   const token = localStorage.getItem('accessToken');
   try {
-    const response = await fetch('http://localhost:4200/api/user/logout', {
+    const response = await fetch('https://ody-api.onrender.com/api/user/logout', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -67,7 +67,7 @@ async function fetchUserData() {
       const idme = await getCurrentUser();
       console.log(idme);
   
-      const response = await fetch(`http://localhost:4200/api/fav/${idme}`, {
+      const response = await fetch(`https://ody-api.onrender.com/api/fav/${idme}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -131,7 +131,7 @@ async function fetchUserData() {
 
         
         try {
-            const response = await fetch('http://localhost:4200/api/fav/', {
+            const response = await fetch('https://ody-api.onrender.com/api/fav/', {
               method: 'DELETE',
               headers: {
                 'Content-Type': 'application/json'
@@ -171,7 +171,7 @@ async function fetchUserData() {
     const token = localStorage.getItem('accessToken');
     console.log(token);
       try {
-        const response = await fetch("http://localhost:4200/api/user/idme", {
+        const response = await fetch("https://ody-api.onrender.com/api/user/idme", {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,

@@ -1,4 +1,4 @@
-fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
+fetch('https://ody-api.onrender.com/api/dest/prixMoinsCherEurope')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -18,7 +18,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
     console.error('There was a problem with the fetch operation:', error);
   });
 
-  fetch('http://localhost:4200/api/dest/prixMoinsCherAsie')
+  fetch('https://ody-api.onrender.com/api/dest/prixMoinsCherAsie')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -38,7 +38,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
     console.error('There was a problem with the fetch operation:', error);
   });
 
-  fetch('http://localhost:4200/api/dest/prixMoinsCherAmerique')
+  fetch('https://ody-api.onrender.com/api/dest/prixMoinsCherAmerique')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -58,7 +58,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
     console.error('There was a problem with the fetch operation:', error);
   });
 
-  fetch('http://localhost:4200/api/dest/prixMoinsCherOceanie')
+  fetch('https://ody-api.onrender.com/api/dest/prixMoinsCherOceanie')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -78,7 +78,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
     console.error('There was a problem with the fetch operation:', error);
   });
 
-  fetch('http://localhost:4200/api/dest/prixMoinsCherAfrique')
+  fetch('https://ody-api.onrender.com/api/dest/prixMoinsCherAfrique')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -98,7 +98,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
     console.error('There was a problem with the fetch operation:', error);
   });
 
-  fetch('http://localhost:4200/api/dest/all/645696692bace0d40aadd607')
+  fetch('https://ody-api.onrender.com/api/dest/all/645696692bace0d40aadd607')
   .then(response => response.json())
   .then(data => {
     const experiencesContainer = document.querySelector(".experiencesAsie");
@@ -110,7 +110,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
 
 
   });
-  fetch('http://localhost:4200/api/dest/all/645696692bace0d40aadd608')
+  fetch('https://ody-api.onrender.com/api/dest/all/645696692bace0d40aadd608')
   .then(response => response.json())
   .then(data => {
     const experiencesContainer = document.querySelector(".experiencesAfrique");
@@ -122,7 +122,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
 
 
   });
-  fetch('http://localhost:4200/api/dest/all/645696692bace0d40aadd605')
+  fetch('https://ody-api.onrender.com/api/dest/all/645696692bace0d40aadd605')
   .then(response => response.json())
   .then(data => {
     const experiencesContainer = document.querySelector(".experiencesEurope");
@@ -134,7 +134,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
 
 
   });
-  fetch('http://localhost:4200/api/dest/all/645696692bace0d40aadd606')
+  fetch('https://ody-api.onrender.com/api/dest/all/645696692bace0d40aadd606')
   .then(response => response.json())
   .then(data => {
     const experiencesContainer = document.querySelector(".experiencesAmerique");
@@ -146,7 +146,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
 
 
   });
-  fetch('http://localhost:4200/api/dest/all/645696692bace0d40aadd609')
+  fetch('https://ody-api.onrender.com/api/dest/all/645696692bace0d40aadd609')
   .then(response => response.json())
   .then(data => {
     const experiencesContainer = document.querySelector(".experiencesOceanie");
@@ -226,7 +226,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
     const token = localStorage.getItem('accessToken');
     console.log(token);
       try {
-        const response = await fetch("http://localhost:4200/api/user/idme", {
+        const response = await fetch("https://ody-api.onrender.com/api/user/idme", {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -252,7 +252,7 @@ fetch('http://localhost:4200/api/dest/prixMoinsCherEurope')
     async function saveFavorite(newFavorite) {
       console.log('new',newFavorite);
     try {
-      const response = await fetch("http://localhost:4200/api/fav/favoris", {
+      const response = await fetch("https://ody-api.onrender.com/api/fav/favoris", {
         method: "POST",
         body: JSON.stringify(newFavorite),
         headers: {

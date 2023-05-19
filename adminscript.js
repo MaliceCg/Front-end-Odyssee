@@ -3,7 +3,7 @@ logoutButton.addEventListener('click', async function() {
   const token = localStorage.getItem('accessToken');
   console.log(token);
   try {
-    const response = await fetch('http://localhost:4200/api/user/logout', {
+    const response = await fetch('https://ody-api.onrender.com/api/user/logout', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       //const hashedPassword = await bcrypt.hash(password, 10); // hacher le mot de passe avec bcrypt
       //console.log(hashedPassword);
       try {
-        const response = await fetch('http://localhost:4200/api/exp/create', {
+        const response = await fetch('https://ody-api.onrender.com/api/exp/create', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

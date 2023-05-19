@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
  
     try {
-      const response = await fetch('http://localhost:4200/api/user/signup', {
+      const response = await fetch('https://ody-api.onrender.com/api/user/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(password);*/
   
       try {
-        const response = await fetch('http://localhost:4200/api/user/login', {
+        const response = await fetch('https://ody-api.onrender.com/api/user/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ async function getCurrentUser() {
   const token = localStorage.getItem('accessToken');
   console.log(token);
     try {
-      const response = await fetch("http://localhost:4200/api/user/idme", {
+      const response = await fetch("https://ody-api.onrender.com/api/user/idme", {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,

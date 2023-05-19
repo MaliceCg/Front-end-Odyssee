@@ -1,4 +1,4 @@
-fetch('http://localhost:4200/api/exp/all')
+fetch('https://ody-api.onrender.com/api/exp/all')
   .then(response => response.json())
   .then(data => {
     const experiencesContainer = document.querySelector(".experiences");
@@ -172,7 +172,7 @@ fetch('http://localhost:4200/api/exp/all')
     const token = localStorage.getItem('accessToken');
     console.log(token);
       try {
-        const response = await fetch("http://localhost:4200/api/user/idme", {
+        const response = await fetch("https://ody-api.onrender.com/api/user/idme", {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -198,7 +198,7 @@ fetch('http://localhost:4200/api/exp/all')
     async function saveFavorite(newFavorite) {
       console.log('new',newFavorite);
     try {
-      const response = await fetch("http://localhost:4200/api/fav/favoris", {
+      const response = await fetch("https://ody-api.onrender.com/api/fav/favoris", {
         method: "POST",
         body: JSON.stringify(newFavorite),
         headers: {
