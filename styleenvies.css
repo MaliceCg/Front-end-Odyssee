@@ -177,13 +177,14 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 2vh;
+    padding:5% 0 5% 0;
 
 
 }
 
 .boutons button {
     display: inline-block; /* affiche les boutons sur une même ligne */
-    margin-left: 4vw;
+    margin-left: 2%;
     height: 5vh;
     font-size: 2vh;
     padding : 0vh 2vw;
