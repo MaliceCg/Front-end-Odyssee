@@ -28,7 +28,7 @@ fetch('https://ody-api.onrender.com/api/exp/all')
     const luxueuxBtn = document.getElementById('luxueux-btn');
     luxueuxBtn.addEventListener('click', () => {
         var bg = document.getElementById("bg"); 
-        document.body.style.backgroundImage = "url('img/Luxueux.jpg')";
+        document.body.style.backgroundImage = "url('img/luxueux.jpg')";
       // Code pour filtrer les expériences aventurier et les afficher
       const luxueuxExperiences = data.filter(experience => experience.nomexp.toLowerCase() === 'luxueux');
       
