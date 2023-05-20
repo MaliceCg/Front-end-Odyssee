@@ -211,7 +211,8 @@ fetch('https://ody-api.onrender.com/api/exp/all')
       if (data.error) {
         console.log(data.error);
       } else {
-        console.log(`Expérience ${newFavorite.experienceId} ajoutée aux favoris`);
+        alert('Expérience ajoutée aux favoris');
+        console.log(`Expérience ajoutée aux favoris`);
       }
     } catch (error) {
       console.log(error);

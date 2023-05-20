@@ -265,6 +265,7 @@ fetch('https://ody-api.onrender.com/api/dest/prixMoinsCherEurope')
       if (data.error) {
         console.log(data.error);
       } else {
+        alert('Expérience ajoutée aux favoris');
         console.log(`Expérience ${newFavorite.experienceId} ajoutée aux favoris`);
       }
     } catch (error) {
