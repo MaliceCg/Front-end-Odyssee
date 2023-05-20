@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Afficher une erreur si l'enregistrement échoue
         const data = await response.json();
         setError(data.message);
+        alert('Identifiants incorrects');
       }
     } catch (err) {
       console.error(err);
