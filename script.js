@@ -1,4 +1,4 @@
-const secretKey = 'SECRET';
+
 
 
 
@@ -133,12 +133,14 @@ async function getCurrentUser() {
     }
   };
 
+  const secretKey = 'SECRET';
+
 function encryptData(data, secretKey) {
     const encryptedData = [];
   
     for (let i = 0; i < data.length; i++) {
       const char = data[i];
-  
+   
       // Appliquer la substitution uniquement aux caractères alphabétiques
       if (/[a-zA-Z]/.test(char)) {
         const charCode = char.charCodeAt(0);
