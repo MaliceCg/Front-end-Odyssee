@@ -156,7 +156,7 @@ html,body {
     object-fit: cover;
   }*/
   .Asie {
-    background-image: url("../img/Asieaccueil.jpg");
+    background-image: url("/Frontend\ Odyssee/img/Asieaccueil.jpg");
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -200,7 +200,7 @@ html,body {
     color: white;
     font-size: 5vh;
     margin-top: 5vh;
-    margin-left: 8vw;
+    margin-left: 8vh;
   }
 .swiper-slide #apartirdeAsie, .swiper-slide #apartirdeAfrique, .swiper-slide #apartirdeEurope, .swiper-slide #apartirdeAmerique, .swiper-slide #apartirdeOceanie {
     margin-top: -2vh;
@@ -213,11 +213,11 @@ html,body {
 
 .swiper-slide #pour{
     margin-top: -14vh;
-    margin-left: 26vw;
+    margin-left: 39vh;
     font-size: 6vh;
 }
 .swiper-slide #nbjoursAsie, .swiper-slide #nbjoursAfrique, .swiper-slide #nbjoursEurope, .swiper-slide #nbjoursAmerique, .swiper-slide #nbjoursOceanie {
-    margin-left: 26vw;
+    margin-left: 39vh;
     margin-top: -2vh;
 }
 
@@ -243,7 +243,7 @@ html,body {
 }
 .swiper-slide .date {
     margin-top: -2vh;
-    margin-left: 60vw;
+    margin-left: 65vw;
     font-size: 5vh;
 }
 .swiper-slide #depart {
@@ -255,11 +255,11 @@ html,body {
     margin-top: -2vh;
 }
 .swiper-slide #ou {
-    margin-left: 18vw;
+    margin-left: 25vh;
     margin-top: -12vh;
 }
 .swiper-slide #plustard {
-    margin-left:18vw;
+    margin-left:25vh;
     margin-top:-2vh;
 }
 .swiper-slide  button{ 
@@ -298,23 +298,23 @@ html,body {
     .swiper-slide #pour {
         font-size: 3vh;
         margin-top: -13vh;
-        margin-left: 50vw;
+        margin-left: 40vh;
     }
     .swiper-slide #nbjoursAsie, .swiper-slide #nbjoursAfrique, .swiper-slide #nbjoursEurope, .swiper-slide #nbjoursAmerique, .swiper-slide #nbjoursOceanie {
-        margin-left: 50vw;
+        margin-left: 40vh;
         margin-top: 0vh;
     }
     .swiper-slide #nbexp {
         margin-top: 30vh;
-        margin-left: 20vw;
+        margin-left: 10vh;
         font-size: 15vh;
     }
     .swiper-slide #experiences{
-        margin-left : 22vh;
+        margin-left : 19vh;
         margin-top: -17vh;
     }
     .swiper-slide #diff {
-        margin-left: 22vh;
+        margin-left: 19vh;
     }
     .swiper-slide .date {
         margin-left: 0vw;
@@ -322,10 +322,10 @@ html,body {
         font-size: 5vh;
     }
     .swiper-slide #ou {
-    margin-left: 30vw;
+    margin-left: 25vh;
     margin-top: -12vh;}
     .swiper-slide #plustard {
-        margin-left:30vw;
+        margin-left:25vh;
     }
 
     .swiper-slide button {
@@ -340,21 +340,21 @@ html,body {
     }
     .swiper-slide #pour {
         margin-top: -12vh;
-        margin-left: 60vw;
+        margin-left: 40vh;
     }
     .swiper-slide #nbjoursAsie, .swiper-slide #nbjoursAfrique, .swiper-slide #nbjoursEurope, .swiper-slide #nbjoursAmerique, .swiper-slide #nbjoursOceanie {
-        margin-left: 60vw;
+        margin-left: 40vh;
         margin-top: -1vh;
     }
     .swiper-slide #nbexp{
-        margin-left: 5vw;
+        margin-left: 2vh;
     }
     .swiper-slide #experiences, .swiper-slide #diff {
-        margin-left: 17vw;
+        margin-left: 10vh;
     }
 
     .swiper-slide #ou, .swiper-slide #plustard {
-        margin-left: 35vw;
+        margin-left: 25vh;
     }
     .swiper-slide button {
     margin-left:35vw;
@@ -362,35 +362,16 @@ html,body {
 
    }
 }
-.ExperienceAsie {
-  background-image: url("../img/Asieaccueil.jpg");
+@media screen and (max-width:350px) {
+  .swiper-slide .exp {
+    margin-top: -30vh;
+    margin-left: 10vw;
+    font-size: 7vh;
 }
-.ExperienceAfrique {
-  background-image: url("../img/Afrique.jpg");
-}
-.ExperienceEurope {
-  background-image: url("../img/Europe.jpg");
-}
-.ExperienceAmerique {
-  background-image: url("../img/Amérique.jpg");
-}
-.ExperienceOceanie {
-  background-image: url("../img/Océanie.jpg");
 }
 
-.ExperienceAsie,.ExperienceAfrique,.ExperienceEurope,.ExperienceAmerique,.ExperienceOceanie {
 
-    background-size: cover;
-    min-height: 100vh;
-    width: auto;
-    height: auto;
-    background-position: center;
-    /*mettre l'image floue*/
-    background-blend-mode: blur(8px);
-    display: flex; /* Ajouter cette ligne */
-    align-items: flex-start; /* Ajouter cette ligne */
-    
-}
+
 
 .experiencesAsie,.experiencesAfrique,.experiencesEurope,.experiencesAmerique,.experiencesOceanie {
 	flex: 1;
@@ -430,7 +411,7 @@ text-align: center;
   border: none;
   padding: 10px 20px;
   margin-top: 2vh;
-  font-size: 1.5vw;
+
   cursor : pointer;
   transition: all 0.3s ease;
 }
