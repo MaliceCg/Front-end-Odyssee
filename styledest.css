@@ -156,7 +156,7 @@ html,body {
     object-fit: cover;
   }*/
   .Asie {
-    background-image: url("/Frontend\ Odyssee/img/Asieaccueil.jpg");
+    background-image: url("../img/Asieaccueil.jpg");
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -370,7 +370,35 @@ html,body {
 }
 }
 
+.ExperienceAsie {
+  background-image: url("../img/Asieaccueil.jpg");
+}
+.ExperienceAfrique {
+  background-image: url("../img/Afrique.jpg");
+}
+.ExperienceEurope {
+  background-image: url("../img/Europe.jpg");
+}
+.ExperienceAmerique {
+  background-image: url("../img/Amérique.jpg");
+}
+.ExperienceOceanie {
+  background-image: url("../img/Océanie.jpg");
+}
 
+.ExperienceAsie,.ExperienceAfrique,.ExperienceEurope,.ExperienceAmerique,.ExperienceOceanie {
+
+    background-size: cover;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    background-position: center;
+    /*mettre l'image floue*/
+    background-blend-mode: blur(8px);
+    display: flex; /* Ajouter cette ligne */
+    align-items: flex-start; /* Ajouter cette ligne */
+    
+}
 
 
 .experiencesAsie,.experiencesAfrique,.experiencesEurope,.experiencesAmerique,.experiencesOceanie {
