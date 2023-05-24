@@ -156,7 +156,7 @@ html,body {
     object-fit: cover;
   }*/
   .Asie {
-    background-image: url("../img/Asieaccueil.jpg");
+    background-image: url("/Frontend\ Odyssee/img/Asieaccueil.jpg");
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -291,6 +291,18 @@ html,body {
   }
 
   @media screen and (max-width:900px) {
+    .swiper-slide h1{
+      color: white;
+      font-size: 30vh;
+      text-align: center;
+      margin-top: 22vh;
+    }
+  .swiper-slide h2 {
+      color: white;
+      font-size: 5vh;
+      margin-top: 5vh;
+      margin-left: 2vh;
+    }
     .swiper-slide h1 {
         font-size: 20vh;
         margin-top: 5vh;
@@ -336,14 +348,14 @@ html,body {
 @media screen and (max-width:500px){
     .swiper-slide h1 {
         font-size: 15vh;
-        margin-top: 5vh;
+        margin-top: 15vh;
     }
     .swiper-slide #pour {
         margin-top: -12vh;
-        margin-left: 40vh;
+        margin-left: 35vh;
     }
     .swiper-slide #nbjoursAsie, .swiper-slide #nbjoursAfrique, .swiper-slide #nbjoursEurope, .swiper-slide #nbjoursAmerique, .swiper-slide #nbjoursOceanie {
-        margin-left: 40vh;
+        margin-left: 35vh;
         margin-top: -1vh;
     }
     .swiper-slide #nbexp{
