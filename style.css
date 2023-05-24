@@ -209,7 +209,7 @@ header{
     
     h1{
         font-size: 13vw;
-        margin-top: 35%;
+        margin-top: 80%;
     }
 }
  /*///////////////////////FIN IMAGE PRINCIPALE//////////////////////*/
@@ -456,7 +456,7 @@ input[type="radio"]{
 
 @media screen and (max-width:200px) {
     .carousel { /*pour que le carousel prenne toute la largeur, une division entière de page*/
-   
+        margin-top: -40vh;
         width: 100vw;
         height: 40vh; /*pour que le carousel ne prenne pas tout l'écran et laisse le mot expérience s'affihcer*/
         overflow: hidden;/*pour cacher les images qui dépassent*/
@@ -490,21 +490,36 @@ input[type="radio"]{
     #Asie{
         background-color: rgb(255, 255, 255);
         width:29vw;
-        height: 35vh;
+        height: 25vh;
     }
     #Afrique{
     
         background-color: rgb(255, 255, 255);
         width:29vw;
-        height: 35vh;
+        height: 25vh;
         margin-left: 5vw;
     }
     #Europe{
     
         background-color: rgb(255, 255, 255);
         width:29vw;
-        height: 35vh;
+        height: 25vh;
         margin-left: 5vw;
+    }
+    #Amérique{
+        
+            background-color: rgb(255, 255, 255);
+            width:29vw;
+            height: 25vh;
+            margin-left: 20vw;
+    }
+
+    #Océanie{
+        
+            background-color: rgb(255, 255, 255);
+            width:29vw;
+            height: 25vh;
+            margin-left: 5vw;
     }
 }
 /************************FIN DU CAROUSEL****************/
