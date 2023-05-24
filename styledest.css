@@ -359,10 +359,10 @@ html,body {
         margin-top: -1vh;
     }
     .swiper-slide #nbexp{
-        margin-left: 2vh;
+        margin-left: 0.5vh;
     }
     .swiper-slide #experiences, .swiper-slide #diff {
-        margin-left: 10vh;
+        margin-left: 7vh;
     }
 
     .swiper-slide #ou, .swiper-slide #plustard {
