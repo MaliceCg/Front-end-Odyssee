@@ -156,7 +156,7 @@ html,body {
     object-fit: cover;
   }*/
   .Asie {
-    background-image: url("/Frontend\ Odyssee/img/Asieaccueil.jpg");
+    background-image: url("../img/Asieaccueil.jpg");
     background-size: cover;
     width: 100vw;
     height: 100vh;
