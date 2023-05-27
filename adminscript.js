@@ -1,3 +1,4 @@
+///////////////////////////DECONNEXION/////////////////////////////////
 const logoutButton = document.getElementById('logoutButton');
 logoutButton.addEventListener('click', async function() {
   const token = localStorage.getItem('accessToken');
@@ -26,6 +27,8 @@ logoutButton.addEventListener('click', async function() {
   }
 });
 
+
+///////////////////////////CREATION EXPERIENCE/////////////////////////////////
 document.addEventListener('DOMContentLoaded', () => {
     const expForm = document.getElementById('exp-form');
   
@@ -52,12 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       const activites = document.getElementById('activites').value;
       const nbpers = document.getElementById('nbpers').value;
+      const token = localStorage.getItem('accessToken');
+  console.log(token);
       //const hashedPassword = await bcrypt.hash(password, 10); // hacher le mot de passe avec bcrypt
       //console.log(hashedPassword);
       try {
         const response = await fetch('https://ody-api.onrender.com/api/exp/create', {
           method: 'POST',
           headers: {
+            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '127.0.0.1'
            
@@ -79,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
+///////////////////////////AFFICHER ET MODIFIER GUIDE///////////////////////////
 fetch('https://ody-api.onrender.com/api/guide/')
   .then(response => response.json())
   .then(data => {
@@ -91,10 +97,6 @@ fetch('https://ody-api.onrender.com/api/guide/')
     });
 
   });
-
-
-
-
 
 function createGuideElement(guide) {
   const guideElement = document.createElement('article');
@@ -199,6 +201,7 @@ async function updateGuide(guideinfo) {
     const response = await fetch(`https://ody-api.onrender.com/api/guide/${idguide}`, {
       method: 'PUT',
       headers: {
+        'Authorization': `Bearer ${token}`,
         
         'Access-Control-Allow-Origin': '127.0.0.1',
          'Content-Type': 'application/json'
@@ -219,3 +222,37 @@ async function updateGuide(guideinfo) {
     console.log('erreur');
   }
 }
+
+///////////////////////////CREER GUIDE////////////////////////////
+document.addEventListener('DOMContentLoaded', () => {
+  const createGuideForm = document.querySelector('#guide-form');
+  createGuideForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const nom = document.getElementById('nom').value;
+    const prenom = document.getElementById('prenom').value;
+    const numeroTelephone = document.getElementById('num').value;
+    const token = localStorage.getItem('accessToken');
+   console.log(token);
+    try {
+      const response = await fetch('https://ody-api.onrender.com/api/guide/create', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '127.0.0.1'
+         
+        },
+        body: JSON.stringify({ nom, prenom, numeroTelephone }),
+      });
+      if (response.ok) {
+        console.log('Guide créé avec succès');
+      } else {
+        // Afficher une erreur si l'enregistrement échoue
+        const data = await response.json();
+        setError(data.message);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  });
+  });

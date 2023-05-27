@@ -212,3 +212,70 @@ body {
 .experience button:hover {
   background-color: #000000;
 }
+
+.mesguides {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  margin-top: 5vh;
+}
+.mesguides h1 {
+  text-align: center;
+  color: #000000;
+  font-size: 8vh;
+
+}
+.guides {
+ 
+flex: 1;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1vw;
+  margin:auto
+}
+.guides h1{
+  text-align: center;
+  color: #ffffff;
+  font-size: 3vh;
+  margin-top: 2vh;
+  margin-left:50vw;
+  
+  
+}
+.guide {
+   margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #202020b5;
+  border-radius: 4px;
+  padding: 3vh 2vh 5vh ;
+  border: 1px solid rgba(0, 0, 0, 0.463);
+  margin-right: 1vw;
+  margin-left :1vw;
+}
+
+.guide  h2 {
+text-align: center;
+  color: #ffffff;
+}
+
+.guide button {
+  font-family: 'Bebas Neue', cursive;
+  background-color: #6b6b6b58;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 2vh;
+
+  cursor : pointer;
+  transition: all 0.3s ease;
+}
+
+
+.guide button:hover {
+  background-color: #000000;
+}

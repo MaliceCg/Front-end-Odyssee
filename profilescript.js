@@ -1,36 +1,4 @@
 
-fetch('https://ody-api.onrender.com/api/guide/')
-  .then(response => response.json())
-  .then(data => {
-    const guideContainer = document.querySelector(".guides");
-
-    data.forEach(guide => {
-        const guideElement = createGuideElement(guide);
-        guideContainer.appendChild(guideElement);
-    });
-  });
-
-  function createGuideElement(guide) {
-    const guideElement = document.createElement('article');
-    guideElement.classList.add('guide');
-  
-    const nomElement = document.createElement('h2');
-    titleElement.innerText = guide.nom;
-    guideElement.appendChild(nomElement);
-  
-    const prenomElement = document.createElement('p');
-    prenomElement.innerText = guide.prenom;
-    guideElement.appendChild(prenomElement);
-
-    const telElement = document.createElement('p');
-    telElement.innerText = guide.numeroTelephone;
-    guideElement.appendChild(telElement);
-
-    
-  
-    return guideElement;
-  }
-
 
 
 
@@ -194,3 +162,34 @@ async function fetchUserData() {
     };
 
 
+    fetch('https://ody-api.onrender.com/api/guide/')
+    .then(response => response.json())
+    .then(data => {
+      const guideContainer = document.querySelector(".guides");
+  
+      data.forEach(guide => {
+          const guideElement = createGuideElement(guide);
+          guideContainer.appendChild(guideElement);
+      });
+  
+    });
+  
+
+
+  function createGuideElement(guide) {
+    const guideElement = document.createElement('article');
+    guideElement.classList.add('guide');
+  
+    const nomElement = document.createElement('h2');
+    nomElement.innerText = guide.nom;
+    guideElement.appendChild(nomElement);
+  
+    const prenomElement = document.createElement('h2');
+    prenomElement.innerText = guide.prenom;
+    guideElement.appendChild(prenomElement);
+  
+    const numElement = document.createElement('h2');
+    numElement.innerText = guide.numeroTelephone;
+    guideElement.appendChild(numElement);
+    return guideElement;
+  }
