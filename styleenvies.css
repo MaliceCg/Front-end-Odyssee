@@ -186,13 +186,14 @@ body {
     display: inline-block; /* affiche les boutons sur une même ligne */
     margin-left: 2%;
     height: 5vh;
-    font-size: 2vh;
+    font-size: 1rem;
     padding : 0vh 2vw;
     text-align: center;
     font-family: 'Bebas Neue', cursive;
     background-color: rgba(122, 122, 122, 0.328);
     color:white;
     border:none;  
+    cursor: pointer;
 }
 .experiences {
     
@@ -233,6 +234,7 @@ body {
     border: none;
     padding: 10px 20px;
     margin-top: 2vh;
+    font-size: 1rem;
 
     cursor : pointer;
     transition: all 0.3s ease;
