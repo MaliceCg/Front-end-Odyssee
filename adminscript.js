@@ -246,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       if (response.ok) {
         console.log('Guide créé avec succès');
+        window.location.href = 'admin.html';
       } else {
         // Afficher une erreur si l'enregistrement échoue
         const data = await response.json();
