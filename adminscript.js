@@ -213,7 +213,7 @@ async function updateGuide(guideinfo) {
     if (response.ok) {
       const data = await response.json();
       console.log('data', data);
-      window.location.href = 'admin.html';
+     
     } else {
       console.log('La demande de modification a échoué.');
     }
