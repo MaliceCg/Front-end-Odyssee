@@ -77,3 +77,145 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 });
+
+
+
+fetch('https://ody-api.onrender.com/api/guide/')
+  .then(response => response.json())
+  .then(data => {
+    const guideContainer = document.querySelector(".guides");
+
+    data.forEach(guide => {
+        const guideElement = createGuideElement(guide);
+        guideContainer.appendChild(guideElement);
+    });
+
+  });
+
+
+
+
+
+function createGuideElement(guide) {
+  const guideElement = document.createElement('article');
+  guideElement.classList.add('guide');
+
+  const nomElement = document.createElement('h2');
+  nomElement.innerText = guide.nom;
+  guideElement.appendChild(nomElement);
+
+  const prenomElement = document.createElement('h2');
+  prenomElement.innerText = guide.prenom;
+  guideElement.appendChild(prenomElement);
+
+  const numElement = document.createElement('h2');
+  numElement.innerText = guide.numeroTelephone;
+  guideElement.appendChild(numElement);
+
+const nomInput = document.createElement('input');
+nomInput.style.display = 'none';
+nomInput.value = guide.nom;
+guideElement.appendChild(nomInput);
+
+const prenomInput = document.createElement('input');
+prenomInput.style.display = 'none';
+prenomInput.value = guide.prenom;
+guideElement.appendChild(prenomInput);
+
+const numInput = document.createElement('input');
+numInput.style.display = 'none';
+numInput.value = guide.numeroTelephone;
+guideElement.appendChild(numInput);
+
+
+const updateBtn = document.createElement('button');
+updateBtn.innerText = 'Modifier les informations';
+updateBtn.addEventListener('click', () => {
+  // Afficher les champs de saisie et cacher les éléments <h2>
+  nomInput.style.display = 'block';
+  prenomInput.style.display = 'block';
+  numInput.style.display = 'block';
+
+  nomElement.style.display = 'none';
+  prenomElement.style.display = 'none';
+  numElement.style.display = 'none';
+
+  updateBtn.style.display = 'none'; // Cacher le bouton "Modifier les informations"
+  saveBtn.style.display = 'block'; // Afficher le bouton "Enregistrer"
+});
+
+const saveBtn = document.createElement('button');
+saveBtn.innerText = 'Enregistrer';
+saveBtn.style.display = 'none'; // Cacher le bouton "Enregistrer" par défaut
+saveBtn.addEventListener('click', async () => {
+  const updatedGuide = {
+    _id: guide._id,
+    nom: nomInput.value,
+    prenom: prenomInput.value,
+    numeroTelephone: numInput.value
+  };
+
+  console.log(updatedGuide); // Affiche les nouvelles informations dans la console
+  await updateGuide(updatedGuide);
+
+  // Envoie updatedGuide au backend pour mise à jour (utilisez votre propre logique ici)
+  // await updateGuide(updatedGuide);
+ 
+
+  // Mettre à jour les éléments <h2> avec les nouvelles valeurs
+  nomElement.innerText = updatedGuide.nom;
+  prenomElement.innerText = updatedGuide.prenom;
+  numElement.innerText = updatedGuide.numeroTelephone;
+
+  // Afficher les éléments <h2> et cacher les champs de saisie
+  nomElement.style.display = 'block';
+  prenomElement.style.display = 'block';
+  numElement.style.display = 'block';
+
+  nomInput.style.display = 'none';
+  prenomInput.style.display = 'none';
+  numInput.style.display = 'none';
+
+  saveBtn.style.display = 'none'; // Cacher le bouton "Enregistrer"
+  updateBtn.style.display = 'block'; // Afficher le bouton "Modifier les informations"
+});
+  
+  guideElement.appendChild(updateBtn);
+  guideElement.appendChild(saveBtn);
+
+  return guideElement;
+}
+
+
+
+async function updateGuide(guideinfo) {
+  console.log(guideinfo);
+  const token = localStorage.getItem('accessToken');
+  console.log(token);
+  idguide = guideinfo._id;
+  console.log(idguide);
+
+  try {
+    const response = await fetch(`https://ody-api.onrender.com/api/guide/${idguide}`, {
+      method: 'PUT',
+      headers: {
+        
+        'Access-Control-Allow-Origin': '127.0.0.1',
+         'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({nom: guideinfo.nom, prenom: guideinfo.prenom, numeroTelephone: guideinfo.numeroTelephone}),
+    });
+    console.log(response);
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log('data', data);
+      window.location.href = 'admin.html';
+    } else {
+      console.log('La demande de modification a échoué.');
+    }
+  } catch (error) {
+    console.log(error);
+    console.log('erreur');
+  }
+}
