@@ -99,10 +99,10 @@ window.onload = async function() {
   const loggedIn = localStorage.getItem('loggedIn');
   const user = await getCurrentUser();
   if (loggedIn === 'true'&& user=='6467a3d6adbf2d004b01bf37') {
-    window.location.href = 'admin.html'; // Rediriger vers la page profil
+    window.location.href = 'admin'; // Rediriger vers la page profil
   }
   else if (loggedIn === 'true') {
-    window.location.href = 'profile.html'; // Rediriger vers la page profil
+    window.location.href = 'profile'; // Rediriger vers la page profil
   }
 }
 

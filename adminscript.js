@@ -17,7 +17,7 @@ logoutButton.addEventListener('click', async function() {
       console.log('data', data);
       localStorage.removeItem('accessToken'); // Supprimer l'accessToken du localStorage
       localStorage.removeItem('loggedIn'); // Réinitialiser le statut de connexion
-      window.location.href = 'login.html'; // Rediriger vers la page de connexion
+      window.location.href = 'login'; // Rediriger vers la page de connexion
     } else {
       console.log('La demande de déconnexion a échoué.');
     }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         if (response.ok) {
           // Rediriger vers la page de connexion si l'enregistrement est réussi
-          window.location.href = 'envies.html';
+          window.location.href = 'envies';
         } else {
           // Afficher une erreur si l'enregistrement échoue
           const data = await response.json();
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       if (response.ok) {
         console.log('Guide créé avec succès');
-        window.location.href = 'admin.html';
+        window.location.href = 'admin';
       } else {
         // Afficher une erreur si l'enregistrement échoue
         const data = await response.json();
@@ -257,3 +257,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   });
+
+
+  window.onload = async function() {
+    const loggedIn = localStorage.getItem('loggedIn');
+    const user = await getCurrentUser();
+ if (loggedIn === 'false') {
+      window.location.href = 'login'; // Rediriger vers la page profil
+    }
+  }

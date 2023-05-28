@@ -20,7 +20,7 @@ logoutButton.addEventListener('click', async function() {
       console.log('data', data);
       localStorage.removeItem('accessToken'); // Supprimer l'accessToken du localStorage
       localStorage.removeItem('loggedIn'); // Réinitialiser le statut de connexion
-      window.location.href = 'login.html'; // Rediriger vers la page de connexion
+      window.location.href = 'login'; // Rediriger vers la page de connexion
     } else {
       console.log('La demande de déconnexion a échoué.');
     }
@@ -193,3 +193,16 @@ async function fetchUserData() {
     guideElement.appendChild(numElement);
     return guideElement;
   }
+
+
+
+window.onload = async function() {
+  const loggedIn = localStorage.getItem('loggedIn');
+  const user = await getCurrentUser();
+  if (loggedIn === 'true'&& user=='6467a3d6adbf2d004b01bf37') {
+    window.location.href = 'admin'; // Rediriger vers la page profil
+  }
+  else if (loggedIn === 'false') {
+    window.location.href = 'login'; // Rediriger vers la page profil
+  }
+}
